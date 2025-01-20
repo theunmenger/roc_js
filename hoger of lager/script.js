@@ -6,7 +6,7 @@ document.getElementById('submit').onclick = function() {
     console.log(number);
     if (number_guessed < number) {
         alert("too low");
-    }   else if (number_guessed > number) {
+    } else if (number_guessed > number) {
         alert("too high");
     } else if (number == number_guessed) {
         alert("you win");
