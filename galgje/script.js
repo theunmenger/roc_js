@@ -5,7 +5,7 @@ let score = 0;
 
 const myArray = woord.split("");
 
-document.getElementById("health").textContent = "levens: " + levens;
+document.querySelector("#health").textContent = "levens: " + levens;
 
 //voeg text toe voor interface
 for(let i = 0; i < myArray.length; i++) {
