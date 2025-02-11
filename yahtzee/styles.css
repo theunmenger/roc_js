@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    background-color:rgb(210, 250, 118);
+}
+
+#page_container {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+td {
+    border: solid 1px;
+   }
+
+#table_container {
+    margin-left: 10%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+#button_container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: auto;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 100px;
+}
+
+#dice_container {
+    display: flex;
+    flex-direction: row;
+    font-size: 60px;
+}
