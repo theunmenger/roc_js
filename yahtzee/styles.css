@@ -16,9 +16,11 @@ td {
 
 #table_container {
     margin-left: 10%;
+    background-color: green;
 }
 
 table {
+    background-color: white;
     border-collapse: collapse;
     width: 100%;
     margin: auto;
@@ -29,7 +31,7 @@ table {
     flex-direction: column;
 }
 
-button {
+#button_container button {
     margin: auto;
     margin-bottom: 5px;
     width: 100%;
@@ -39,5 +41,20 @@ button {
 #dice_container {
     display: flex;
     flex-direction: row;
+}
+
+.dice {
     font-size: 60px;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#left_container {
+    background-color: beige;
+    padding: 50px;
+    border-radius: 20px;
 }
