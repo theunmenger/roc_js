@@ -190,6 +190,14 @@ document.querySelector("#dice_roll").onclick = function() {
         table.rows[10].cells[1].innerText = four_of_a_kind_score;
     }
 
+    //full house
+
+    //small straight
+
+    //large straight
+
+    //chance
+
     //yahtzee  
     for (let i = 0; i < dice_roll.length; i++) {
         if (dice_roll[i] = dice_roll[0]) {
@@ -198,9 +206,12 @@ document.querySelector("#dice_roll").onclick = function() {
             yahtzee = 0;
         }
     }
+    //put yahtzee in table
     if (yahtzee == 5) {
         table.rows[16].cells[1].innerText = 50;
     }
+
+    //total score
  }
 
 //if finalize button is clicked 
