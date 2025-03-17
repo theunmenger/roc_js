@@ -8,6 +8,8 @@ let three_of_a_kind = [0, 0, 0, 0, 0];
 let four_of_a_kind = [0, 0, 0, 0, 0];
 let table = document.querySelector("table");
 let rows = table.rows;
+let three_of_a_kind_score = 0;
+let four_of_a_kind_score = 0;
 //scores
 let ones = 0;
 let twos = 0;
