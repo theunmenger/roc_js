@@ -19,9 +19,14 @@ let fives = 0;
 let sixes = 0;
 let sum = 0;
 let yahtzee = 0;
+let total_score = 0;
+let yahtzee_score = 0;
 
 //if button is clicked
-document.querySelector("#dice_roll").onclick = function() {
+document.querySelector("#dice_roll").addEventListener("click", rollButtonClick) ;
+
+
+function rollButtonClick() {
     //clear scoreboard uppon reroll
     ones = 0;
     twos = 0;
@@ -32,6 +37,8 @@ document.querySelector("#dice_roll").onclick = function() {
     sum = 0;
     three_of_a_kind_score = 0;
     four_of_a_kind_score = 0;
+    total_score = 0;
+    yahtzee_score = 0;
 
     button_is_clicked = true;
 
@@ -127,7 +134,7 @@ document.querySelector("#dice_roll").onclick = function() {
         }
     }
     //put fives in table
-    table.rows[5].cells[1].innerText = fours;
+    table.rows[5].cells[1].innerText = fives;
 
     //sixes
     for (let i = 0; i < dice_roll.length; i++) {
@@ -146,7 +153,6 @@ document.querySelector("#dice_roll").onclick = function() {
 
     //three of a kind
     let counter = 0;
-    let three_of_a_kind_score = 0;
     for (let i = 0; i < dice_roll.length; i++) {
         three_of_a_kind[i] = dice_roll[i];
     }
@@ -170,7 +176,6 @@ document.querySelector("#dice_roll").onclick = function() {
 
     //four of a kind
     let counter2 = 0;
-    let four_of_a_kind_score = 0;
     for (let i = 0; i < dice_roll.length; i++) {
         four_of_a_kind[i] = dice_roll[i];
     }
@@ -195,14 +200,14 @@ document.querySelector("#dice_roll").onclick = function() {
     //full house
 
     //small straight
-
+    
     //large straight
 
     //chance
 
     //yahtzee  
     for (let i = 0; i < dice_roll.length; i++) {
-        if (dice_roll[i] = dice_roll[0]) {
+        if (dice_roll[i] == dice_roll[0]) {
             yahtzee++;
         } else {
             yahtzee = 0;
@@ -210,10 +215,13 @@ document.querySelector("#dice_roll").onclick = function() {
     }
     //put yahtzee in table
     if (yahtzee == 5) {
-        table.rows[16].cells[1].innerText = 50;
+        yahtzee_score += 50;
     }
+    table.rows[16].cells[1].innerText = yahtzee_score;
 
     //total score
+    total_score += ones + twos + threes + fours + fives + sixes + three_of_a_kind_score + four_of_a_kind_score + yahtzee_score;
+    table.rows[16].cells[1].innerText = total_score;
  }
 
 //if finalize button is clicked 
